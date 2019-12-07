@@ -1,0 +1,8 @@
+
+redis.process.uri.spare
+libra.redis.uri
+leaguer.redis.uri
+spring.redis.redisForIm.uri
+redis.process.uri.spare
+redis.report.uri
+redis.uri
