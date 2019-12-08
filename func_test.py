@@ -55,18 +55,46 @@ __date__ = '2019/12/7 14:39'
 # for i in range(10, 20, 2):
 #     print(i)
 
-def frange(start, stop, step):  # float range
-    x = start
-    # while True:
-    #     x < stop
-    while x < stop:
-        # print(x)
-        yield x
-        x += step
+# def frange(start, stop, step):  # float range
+#     x = start
+#     # while True:
+#     #     x < stop
+#     while x < stop:
+#         # print(x)
+#         yield x
+#         x += step
+#
+#
+# for i in frange(10, 20, 0.5):
+#     print(i)
 
 
-for i in frange(10, 20, 0.5):
-    print(i)
+# def true(): return True
+# lambda: True
+
+
+# def add(x, y):
+#     return x+y
+#
+#
+# add(3, 5)
+# print(add(3, 5))
+
+# def add(x, y): return x+y
+# lambda x, y: x+y
+#
+#
+# def func1(x):
+#     return x <= (month, dya)
+# lambda x: x <= (month, day)
+#
+#
+# def func2(item):
+#     return item[1]
+# lambda item: item[1]
+
+
+
 
 
 
