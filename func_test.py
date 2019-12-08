@@ -31,11 +31,44 @@ __date__ = '2019/12/7 14:39'
 # # howlong()
 
 
-var1 = 123
+# var1 = 123
+#
+#
+# def func():
+#     global var1
+#     var1 = 456
+#     print(var1)
+#
+#
+# func()
+# print(var1)
 
 
-def func():
-    print(var1)
+# list1 = [1, 2, 3]
+# it = iter(list1)
+# print(next(it))
+# print(next(it))
+# print(next(it))
+# # print(next(it))   # except
 
 
-func()
+# for i in range(10, 20, 2):
+#     print(i)
+
+def frange(start, stop, step):  # float range
+    x = start
+    # while True:
+    #     x < stop
+    while x < stop:
+        # print(x)
+        yield x
+        x += step
+
+
+for i in frange(10, 20, 0.5):
+    print(i)
+
+
+
+
+

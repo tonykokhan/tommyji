@@ -5,12 +5,12 @@ __date__ = '2019/12/7 13:55'
 import re
 
 
-def find_main_charecters(charecter_name):
+def find_main_characters(character_name):
     with open('sanguo.txt', encoding='UTF-8') as f:
         data = f.read().replace('\n', '')
-        name_num = re.findall(charecter_name, data)
-        # print('主角 %s 出现 %s 次' % (charecter_name, len(name_num)))
-    return charecter_name, len(name_num)
+        name_num = re.findall(character_name, data)
+        print('主角 %s 出现 %s 次' % (character_name, len(name_num)))
+    return character_name, len(name_num)
     # return len(name_num)    # 报错
 
 
@@ -20,7 +20,7 @@ with open('name.txt') as f:
     for line in f:
         names = line.split('|')
         for n in names:
-            char_name, char_number = find_main_charecters(n)
+            char_name, char_number = find_main_characters(n)
             name_dict[char_name] = char_number
             # print(char_name)
             # print(char_number)
@@ -32,8 +32,8 @@ with open('weapon.txt', encoding='UTF-8') as f:
     i = 1
     for line in f:
         if i % 2 == 1:
-            # weapon_name, weapon_number = find_main_charecters(line.strip('\n'))
-            weapon_name, weapon_number = find_main_charecters(line.strip())
+            # weapon_name, weapon_number = find_main_characters(line.strip('\n'))
+            weapon_name, weapon_number = find_main_characters(line.strip())
             weapon_dict[weapon_name] = weapon_number
         i += 1
 
