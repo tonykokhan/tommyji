@@ -22,10 +22,10 @@
 
 
 a = [1, 2, 3]
-# # b = map(lambda x: x, a)
-# b = map(lambda x: x+1, a)
-# print(b)
-# print(list(b))
+# aa = map(lambda x: x, a)     # 把多个参数依次进行处理
+aa = map(lambda x: x+1, a)
+print(aa)
+print(list(aa))
 
 
 b = [4, 5, 6]
