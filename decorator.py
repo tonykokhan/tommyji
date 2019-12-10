@@ -8,7 +8,7 @@ import time
 # print(time.time())
 
 
-def timer(func):    # 闭包和装饰器的区别：闭包传递进来的是变量，装饰器传递进来的是函数
+def timer(func):    # 闭包和装饰器的区别：闭包传递进来的是变量，内部的函数引用的也是变量；装饰器传递进来的是函数，内部的函数引用的也是一个函数
     def wrapper():
         start_time = time.time()
         func()
@@ -23,9 +23,14 @@ def i_can_sleep():
     # return time.sleep(3)
 
 
-print(timer(i_can_sleep()))
+# print(timer(i_can_sleep()))
 # start_time = time.time()
-# i_can_sleep()   # 执行过成：num = timer(i_can_sleep())，num()
+i_can_sleep()
+# 执行过成类似下面两行：
+# num = timer(i_can_sleep())
+# num()
+# print(num)
+# print(type(num))
 # stop_time = time.time()
 # print('函数运行了 %s 秒' % (stop_time-start_time))
 
