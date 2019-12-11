@@ -1,6 +1,6 @@
 from functools import reduce
 
-a = reduce(lambda x, y: x+y, [2, 3, 4], 1)
+a = reduce(lambda x, y: x + y, [2, 3, 4], 1)
 print(a)
 
 # 效果：((1+2)+3)+4
@@ -24,5 +24,3 @@ print(dicta.values())
 print(dicta.keys())
 # print(dicta.items())
 print(dict(dictb))  # 转换成字典
-
-
