@@ -1,3 +1,5 @@
-# -*- coding: utf-8 -*-
-__author__ = 'tommyji'
-__date__ = '2019/12/12 15:09'
+import random
+
+print(random.randint(1, 5))
+print(random.choice(['aa', 'bb', 'cc']))
+print(random.choice(('aa', 'bb', 'cc')))
