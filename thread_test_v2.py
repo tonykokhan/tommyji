@@ -10,7 +10,9 @@ class Mythread(threading.Thread):
 
 
 t1 = Mythread()
+# 启动子进程t1
 t1.start()
+# 等待t1结束
 t1.join()
 
 print(current_thread().getName(), 'end')
