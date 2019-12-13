@@ -22,15 +22,19 @@ def change_it(n):
 
 
 def run_thread(n):
-    for i in range(100000):
+    for i in range(100000):     # change_it(n)跑10万次，取最后一次运行的结果
         change_it(n)
 
 
 t1 = threading.Thread(target=run_thread, args=(5,))
 t2 = threading.Thread(target=run_thread, args=(8,))
+# 启动子进程t1
 t1.start()
+# 启动子进程t2
 t2.start()
+# 等待t1结束
 t1.join()
+# 等待t2结束
 t2.join()
 print(balance)
 
