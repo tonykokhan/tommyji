@@ -8,11 +8,11 @@ print(os.path.isdir(r'\PycharmProjects'))
 
 
 p = Path('.')
-# print(type(p))
+print(type(p))
 print(p.resolve())
 
 print(p.is_dir())
 
-q = Path('/tmp/a/b/c')
-Path.mkdir(q, parents=True)
+# q = Path('/tmp/a/b/c')
+# Path.mkdir(q, parents=True)
 
