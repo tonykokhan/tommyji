@@ -10,4 +10,4 @@ results = re.findall(pattern, content)
 
 for result in results:
     url, name = result
-    print(url, re.sub('\s', '', name))
+    print(url, re.sub(r'\s', '', name))
