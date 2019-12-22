@@ -37,7 +37,10 @@ for i in range(5000000):
 a = "".join(li)
 # print(a)
 time04 = time.time()
-print("运算时间："+str(time04-time03))
+# print("运算时间："+str(time04-time03))
+# print("运算时间：%s" % str(time04-time03))
+print("运算时间：{0}".format(str(time04-time03)))
+
 
 # 输出：
 # 运算时间：14.667612791061401
