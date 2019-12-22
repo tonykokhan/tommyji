@@ -1,0 +1,90 @@
+字符串驻留：
+仅保存一份相同且不可变字符串的方法，不同的值被存放在字符串驻留池中。
+Python支持字符串驻留机制，对于符合标识符规则的字符串（仅包含下划线(_)、字母和数字）会启用字符串驻留机制。
+
+In [18]: a = "abd_33"
+
+In [19]: b = "abd_33"
+
+In [20]: a is b
+Out[20]: True
+
+In [21]: c = "dd#"
+
+In [22]: d = "dd#"
+
+In [23]: c is d
+Out[23]: False
+
+In [24]: str1 = "aa"
+
+In [25]: str2 = "bb"
+
+In [26]: str1+str2 is "aabb"
+<>:1: SyntaxWarning: "is" with a literal. Did you mean "=="?
+<ipython-input-32-5271d1cc4d9c>:1: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  str1+str2 is "aabb"
+Out[26]: False
+
+In [27]: str1+str2 == "aabb"
+Out[27]: True
+
+
+字符串比较和同一性：
+我们可以直接使用==，!==对字符串进行比较，是否含有相同的字符。
+我们使用is/not is，判断两个对象是否同一个对象。比较的是对象的地址，即id(obj1)是否和id(obj2)相等。
+
+
+成员操作符：
+in/not in关键字，判断某个字符（子字符串）是否存在于字符串中。
+
+In [36]: a = "abcdefg"
+
+In [37]: "b" in a
+Out[37]: True
+
+In [38]: "bcd" in a
+Out[38: True
+
+In [39]: "ddd" in a
+Out[39]: False
+
+In [40]: "ddd" not in a
+Out[40]: True
+
+
+常用查找方法：
+len(a) - 字符串长度
+a.startswith('我是计开源') - 以指定字符串开头
+a.endswith('过我') - 以指定字符串结尾
+a.find('计') - 第一次出现指定字符串的位置
+a.rfind('计') - 最后一次出现指定字符串的位置
+a.count("编程") - 指定字符串出现了几次
+a.isalnum() - 所有字符全是字母或数字
+
+
+去除首尾信息：
+我们可以通过strip()去除字符串首尾指定信息。通过lstrip()去除字符串左边指定信息，rstrip()去除字符串右边指定信息。
+
+In [6]: "*z*h*s*".strip("*")
+Out[6]: 'z*h*s'
+
+In [7]: "*z*h*s*".lstrip("*")
+Out[7]: 'z*h*s*'
+
+In [8]: "*z*h*s*".rstrip("*")
+Out[8]: '*z*h*s'
+
+In [9]: "   zhs   ".strip()
+Out[9]: 'zhs'
+
+In [10]: "   z h s   ".strip()
+Out[10]: 'z h s'
+
+
+大小写转换：
+a.capitalize() - 产生新的字符串，首字母大写
+a.title() - 产生新的字符串，每个单词都首字母大写
+a.upper() - 产生新的字符串，所有字符全转成大写
+a.lower() - 产生新的字符串，所有字符全转成小写
+a.swapcase() - 产生新的字符串，所有字母大小写转换
