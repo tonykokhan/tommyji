@@ -15,17 +15,17 @@ print(''.join(a))
 # 会计算所有字符串的长度然后逐一拷贝，仅新建一次对象。
 
 
-# 测试 + 拼接符和 join()，不同的效率
-# join() 效率远高于 +
-time01 = time.time()    # 起始时间
-a = ""
-for i in range(5000000):
-    a += "sxt"
-
-# print(a)
-
-time02 = time.time()    # 终止时间
-print("运算时间："+str(time02-time01))
+# # 测试 + 拼接符和 join()，不同的效率
+# # join() 效率远高于 +
+# time01 = time.time()    # 起始时间
+# a = ""
+# for i in range(5000000):
+#     a += "sxt"
+#
+# # print(a)
+#
+# time02 = time.time()    # 终止时间
+# print("运算时间："+str(time02-time01))
 
 
 time03 = time.time()
@@ -34,8 +34,8 @@ for i in range(5000000):
     li.append("sxt")
 
 # print(li)
-a = "".join(li)
-# print(a)
+a = "".join(li)     # ""代表无分隔符
+print(a)
 time04 = time.time()
 # print("运算时间："+str(time04-time03))
 # print("运算时间：%s" % str(time04-time03))
