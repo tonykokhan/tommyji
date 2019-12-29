@@ -17,6 +17,8 @@ a = 100     # 全局变量
 
 
 def f1():
+    b = 4
+    print(b * 10)
     global a    # 如果要在函数内改变全局变量的值，增加global关键字声明
     print(a)    # 打印全局变量a的值
     a = 300
@@ -26,6 +28,6 @@ def f1():
     # print(globals())
 
 
-print(a)
-f1()
-print(a)
+print(a)    # 100
+f1()        # 40 100 300
+print(a)    # 300
