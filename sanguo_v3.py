@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-__author__ = 'tommyji'
-__date__ = '2019/12/7 13:55'
-
 import re
 
 
