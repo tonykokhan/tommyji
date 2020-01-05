@@ -26,3 +26,12 @@ s2.say_score()
 Student.say_score(s2)   # 解释器实际调用情况，同上，效果一模一样
 
 print(dir(s2))
+print(s2.__dict__)
+print(isinstance(s2, Student))
+
+
+class Man:
+    pass
+
+
+print(isinstance(s2, Man))
