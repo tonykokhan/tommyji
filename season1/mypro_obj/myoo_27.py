@@ -1,7 +1,7 @@
 # 测试单例模式
 class MySingleton:
 
-    __obj = None    # 类属性
+    __obj = None    # 定义类的私有属性
     __init_flag = True
 
     def __new__(cls, *args, **kwargs):
@@ -23,14 +23,14 @@ print(dir(MySingleton))
 print(dir(a))
 print(a)
 print(a._MySingleton__obj)  # 同 print(a)
-print(a._MySingleton__init_flag)
+print(a._MySingleton__init_flag)    # False
 print(b)
 print(b._MySingleton__obj)  # 同 print(b)
-print(b._MySingleton__init_flag)
+print(b._MySingleton__init_flag)    # False
 c = MySingleton("cc")
 print(c)
 print(c._MySingleton__obj)  # 同 print(c)
-print(c._MySingleton__init_flag)
+print(c._MySingleton__init_flag)    # False
 print(a.name)   # aa
 print(b.name)   # aa
 print(c.name)   # aa
