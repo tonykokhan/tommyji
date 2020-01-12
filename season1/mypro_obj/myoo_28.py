@@ -13,7 +13,7 @@ class CarFactory:
         else:
             return "未知品牌，无法创建"
 
-    def __new__(cls, *args, **kwargs):
+    def __new__(cls, *args, **kwargs):  # 重写__new__()方法
         if cls.__obj is None:
             cls.__obj = object.__new__(cls)
 
