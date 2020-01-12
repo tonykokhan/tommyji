@@ -23,6 +23,9 @@ class B:
 
 
 class C(B, A):
+    def __init__(self, nn):
+        self.nn = nn
+
     def cc(self):
         print("cc")
 
@@ -32,9 +35,16 @@ class C(B, A):
 #         print("cc")
 
 
-c = C()
+c = C(3)
 # c.cc()
 # c.bb()
 # c.aa()
 print(C.mro())  # 打印类的层次结构：[<class '__main__.C'>, <class '__main__.B'>, <class '__main__.A'>, <class 'object'>]
 c.say()         # 解释器寻找方法是“从左到右”的方式寻找，此时会执行B类中的say()
+
+print(dir(c))
+print(c.__dict__)
+print(c.__class__)
+print(C.__bases__)  # 注意是大写的C
+print(C.mro())      # 注意是大写的C
+print(A.__subclasses__())   # 注意是大写的A
