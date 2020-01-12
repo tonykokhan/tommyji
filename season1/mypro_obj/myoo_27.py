@@ -19,7 +19,18 @@ class MySingleton:
 
 a = MySingleton("aa")
 b = MySingleton("bb")
+print(dir(MySingleton))
+print(dir(a))
 print(a)
+print(a._MySingleton__obj)  # 同 print(a)
+print(a._MySingleton__init_flag)
 print(b)
+print(b._MySingleton__obj)  # 同 print(b)
+print(b._MySingleton__init_flag)
 c = MySingleton("cc")
 print(c)
+print(c._MySingleton__obj)  # 同 print(c)
+print(c._MySingleton__init_flag)
+print(a.name)   # aa
+print(b.name)   # aa
+print(c.name)   # aa
