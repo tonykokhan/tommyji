@@ -22,15 +22,19 @@ b = MySingleton("bb")
 c = MySingleton("cc")
 print(dir(MySingleton))
 print(dir(a))
+
 print(a)
-print(a._MySingleton__obj)  # 同 print(a)
+print(a._MySingleton__obj)          # 同 print(a)
 print(a._MySingleton__init_flag)    # False
-print(b)                    # 同 print(a)
-print(b._MySingleton__obj)  # 同 print(a)
+
+print(b)                            # 同 print(a)
+print(b._MySingleton__obj)          # 同 print(a)
 print(b._MySingleton__init_flag)    # False
-print(c)                    # 同 print(a)
-print(c._MySingleton__obj)  # 同 print(a)
+
+print(c)                            # 同 print(a)
+print(c._MySingleton__obj)          # 同 print(a)
 print(c._MySingleton__init_flag)    # False
+
 print(a.name)   # aa
 print(b.name)   # aa
 print(c.name)   # aa
