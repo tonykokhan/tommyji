@@ -18,7 +18,7 @@ if __name__ == '__main__':  # 这行代码很重要，新建进程的时候都�
     jc2 = multiprocessing.Process(target=action, args=('进程二', 1))
     # 必要参数target:指定进程要执行的任务(这里是执行函数action),
     # 必要参数args:直译成中文就是'参数'，顾名思义就是前面target的参数，即action的参数，注意args是个元组，
-    # 所以args后的参数写成tuple元组格式。直接写target('进程一',0)一定报错的
+    # 所以args后的参数写成tuple元组格式。直接写target('进程一', 0)一定报错的
 
     jc1.start()  # 将蓄势待发的jc1进程正式启动！！
     jc2.start()  # 同上...
