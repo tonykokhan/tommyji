@@ -1,5 +1,6 @@
 from pathlib import Path
 import os
+print(os.path.abspath('.'))
 print(os.path.abspath('..'))
 print(os.path.exists(r'\PycharmProjects'))
 print(os.path.isfile(r'\PycharmProjects'))
@@ -15,4 +16,3 @@ print(p.is_dir())
 
 # q = Path('/tmp/a/b/c')
 # Path.mkdir(q, parents=True)
-

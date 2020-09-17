@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 def new_tips(argv):
     def tips(func):
         def wrapper(a, b):
@@ -18,5 +19,6 @@ def sub(a, b):
     print(a - b)
 
 
-print(add(4, 5))
-print(sub(7, 3))
+# add(4, 5)
+print(add(4, 5))  # None由此返回
+# print(sub(7, 3))
