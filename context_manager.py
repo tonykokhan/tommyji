@@ -6,6 +6,6 @@ finally:
     fd.close()
 
 
-with open('name.txt') as f:
-    for line in f:
-        print(line)
+# with open('name.txt') as f:
+#     for line in f:
+#         print(line)
