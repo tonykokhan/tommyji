@@ -1,3 +1,9 @@
+# map() 函数语法：
+# map(function, iterable, ...)
+# 参数
+# function -- 函数
+# iterable -- 一个或多个序列
+
 # adict = {'a': 'aa', 'b': 'bb'}
 #
 #
@@ -22,7 +28,7 @@
 
 
 a = [1, 2, 3]
-# aa = map(lambda x: x, a)     # 把多个参数依次进行处理
+# aa = map(lambda x: x, a)     # 把多个参数依次进行处理。map()会根据提供的函数对指定序列做映射。
 aa = map(lambda x: x+1, a)
 print(aa)
 print(list(aa))

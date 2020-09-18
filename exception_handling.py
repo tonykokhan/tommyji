@@ -44,10 +44,11 @@ __date__ = '2019/12/5 15:52'
 #     print('my custom error')
 
 try:
-    a = open('name.txt')
+    # a = open('name.txt')
+    a = open('name1.txt')
 except Exception as e:
     print(e)
 
-finally:
-    a.close()
+# finally:
+#     a.close()
 
