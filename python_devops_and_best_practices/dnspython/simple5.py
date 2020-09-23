@@ -27,18 +27,16 @@ def get_iplist(appdomain=""):  # 域名解析函数，解析成功IP将被追加
             if j.rdtype == 1:   # A记录
                 print(int(j.rdtype))
                 iplist.append(j.address)  # 追加到iplist
-                return iplist
             elif j.rdtype == 5:     # CNMAE记录
                 print(int(j.rdtype))
                 print(j.rdtype)
                 iplist.append(j)  # 追加到iplist
-                print(iplist)
             elif j.rdtype == 15:     # MX记录
                 # print(int(j.rdtype))
                 # print(j.rdtype)
                 iplist.append(j)  # 追加到iplist
-                print(iplist)
-        # return True     # 加了这条相当于不返回任何数据
+        return True
+        # return iplist   # 效果同上
 
 
 def checkip(ip):
@@ -67,7 +65,9 @@ if __name__ == "__main__":
     #     print("dns resolver error.")
 
     if get_iplist(appdomain):  # 条件：域名解析正确且至少返回一个IP
+        # print(iplist)
         for ip in iplist:
-            checkip(ip)
+            print(ip)
+            # checkip(ip)
     else:
         print("dns resolver error.")
