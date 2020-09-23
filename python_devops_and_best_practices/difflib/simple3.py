@@ -18,7 +18,8 @@ def readfile(filename):  # 文件读取分隔函数
         fileHandle = open(filename, 'rb')
         string = fileHandle.read().decode()    # python3为字节，python2为字符串。需要将字节转换为字符串，参考：https://blog.csdn.net/cunchi4221/article/details/107475824
         text = string.splitlines()  # 读取字符串后以行进行分隔，然后放到一个列表里
-        print(text)
+        # print(len(text))
+        # print(text)
         fileHandle.close()
         return text
     except IOError as error:
@@ -32,9 +33,9 @@ if textfile1 == "" or textfile2 == "":
 
 text1_lines = readfile(textfile1)			# 调用readfile函数，获取分隔后的字符串
 # print(text1_lines)
+# print(len(text1_lines))
 text2_lines = readfile(textfile2)
 # print(text2_lines)
 
 d = difflib.HtmlDiff()				# 创建HtmlDiff()类对象
-print(d.make_file(text1_lines, text2_lines))
-# print(d.make_file(text1_lines, text2_lines))  # 通过make_file方法输出HTML格式的比对结果
+print(d.make_file(text1_lines, text2_lines))  # 通过make_file方法输出HTML格式的比对结果
