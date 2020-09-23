@@ -8,12 +8,14 @@ import http.client
 
 iplist = []			# 定义域名IP列表变量
 # appdomain = "www.google.com.hk"  # 定义业务域名
-appdomain = "www.2144.cn"
+# appdomain = "www.2144.cn"
+# appdomain = "www.zhihuishu.com"
+appdomain = "163.com"
 
 
 def get_iplist(appdomain=""):  # 域名解析函数，解析成功IP将被追加到iplist
     try:
-        r = dns.resolver.resolve(appdomain, 'A')  # 解析A记录类型
+        r = dns.resolver.resolve(appdomain, 'mx')  # 解析A记录类型
     except Exception as e:
         print("dns resolver error:" + str(e))
         return
@@ -21,14 +23,21 @@ def get_iplist(appdomain=""):  # 域名解析函数，解析成功IP将被追加
         # print(i.items)
         for j in i.items:
             # print(j)
+            # print(int(j.rdtype))
             if j.rdtype == 1:   # A记录
                 print(int(j.rdtype))
                 iplist.append(j.address)  # 追加到iplist
                 return iplist
-            # elif j.rdtype == 5:     # CNMAE记录
-            #     print(j.rdtype)
-            #     iplist.append(j)  # 追加到iplist
-            #     print(iplist)
+            elif j.rdtype == 5:     # CNMAE记录
+                print(int(j.rdtype))
+                print(j.rdtype)
+                iplist.append(j)  # 追加到iplist
+                print(iplist)
+            elif j.rdtype == 15:     # MX记录
+                # print(int(j.rdtype))
+                # print(j.rdtype)
+                iplist.append(j)  # 追加到iplist
+                print(iplist)
         # return True     # 加了这条相当于不返回任何数据
 
 
@@ -50,7 +59,14 @@ def checkip(ip):
 
 
 if __name__ == "__main__":
-    if get_iplist(appdomain) and len(iplist) > 0:  # 条件：域名解析正确且至少返回一个IP
+    # if get_iplist(appdomain) and len(iplist) > 0:  # 条件：域名解析正确且至少返回一个IP
+    #     for ip in iplist:
+    #         print(ip)
+    #         # checkip(ip)
+    # else:
+    #     print("dns resolver error.")
+
+    if get_iplist(appdomain):  # 条件：域名解析正确且至少返回一个IP
         for ip in iplist:
             checkip(ip)
     else:
