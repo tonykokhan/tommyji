@@ -22,6 +22,7 @@ def get_iplist(domain=""):  # 域名解析函数，解析成功IP将被追加到
                 iplist.append(j.address)  # 追加到iplist
                 if len(iplist) > 0:
                     print(iplist)
+    print("----------------------------------")
     if len(iplist) > 0:
         print(iplist)
 
