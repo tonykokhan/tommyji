@@ -4,12 +4,12 @@ import sys
 
 try:
     textfile1 = sys.argv[1]  # 第一个配置文件路径参数
-    print(textfile1)
+    # print(textfile1)
     textfile2 = sys.argv[2]  # 第二个配置文件路径参数
-    print(textfile2)
+    # print(textfile2)
 except Exception as e:
     print("Error:" + str(e))
-    print("Usage: simple3.py filename1 filename2")
+    print("Usage1: simple3.py filename1 filename2")
     sys.exit()
 
 
@@ -24,14 +24,15 @@ def readfile(filename):  # 文件读取分隔函数
         sys.exit()
 
 
-# if textfile1 == "" or textfile2 == "":
-#     print("Usage: simple3.py filename1 filename2")
-#     sys.exit()
+if textfile1 == "" or textfile2 == "":
+    print("Usage2: simple3.py filename1 filename2")
+    sys.exit()
 
 text1_lines = readfile(textfile1)			# 调用readfile函数，获取分隔后的字符串
-# print(text1_lines)
+print(text1_lines)
 text2_lines = readfile(textfile2)
 # print(text2_lines)
 
 d = difflib.HtmlDiff()				# 创建HtmlDiff()类对象
-print(d.make_file(text1_lines, text2_lines))  # 通过make_file方法输出HTML格式的比对结果
+# print(d.make_file(text1_lines, text2_lines))
+# print(d.make_file(text1_lines, text2_lines))  # 通过make_file方法输出HTML格式的比对结果
