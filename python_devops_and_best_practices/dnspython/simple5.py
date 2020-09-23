@@ -22,7 +22,7 @@ def get_iplist(appdomain=""):  # 域名解析函数，解析成功IP将被追加
         for j in i.items:
             # print(j)
             if j.rdtype == 1:   # A记录
-                print(j.rdtype)
+                print(int(j.rdtype))
                 iplist.append(j.address)  # 追加到iplist
                 return iplist
             # elif j.rdtype == 5:     # CNMAE记录
