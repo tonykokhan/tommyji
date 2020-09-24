@@ -64,10 +64,14 @@ if __name__ == "__main__":
     # else:
     #     print("dns resolver error.")
 
-    if get_iplist(appdomain):  # 条件：域名解析正确且至少返回一个IP
+    if get_iplist(appdomain):  # 条件：域名解析正确
         # print(iplist)
         for ip in iplist:
             print(ip)
             # checkip(ip)
     else:
         print("dns resolver error.")
+
+    # get_iplist(appdomain)
+    # for ip in iplist:
+    #     print(ip)
