@@ -2,6 +2,7 @@
 __author__ = 'tommyji'
 __date__ = '2020/9/25 10:12'
 
+# 实现远程SSH运行命令
 import paramiko
 
 hostname = '120.26.44.175'

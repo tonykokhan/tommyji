@@ -2,6 +2,7 @@
 __author__ = 'tommyji'
 __date__ = '2020/9/25 10:19'
 
+# 实现密钥方式登录远程主机
 import paramiko
 import os
 

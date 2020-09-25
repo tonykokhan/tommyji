@@ -2,6 +2,7 @@
 __author__ = 'tommyji'
 __date__ = '2020/9/25 10:13'
 
+# 实现文件上传、下载、创建与删除目录
 import paramiko
 
 username = "root"
