@@ -1,13 +1,13 @@
 HTTP/1.1 200 OK
-Date: Thu, 24 Sep 2020 15:28:44 GMT
+Date: Fri, 25 Sep 2020 14:01:24 GMT
 Content-Type: text/html
 Transfer-Encoding: chunked
 Connection: keep-alive
-Set-Cookie: acw_tc=707c9fd716009613246738547e2aef387c9b35620cf9bae0f593b8653750a9;path=/;HttpOnly;Max-Age=1800
+Set-Cookie: acw_tc=707c9fd216010424841418242e77bb716a2198f40ca6d117e520340684d4b3;path=/;HttpOnly;Max-Age=1800
 Vary: Accept-Encoding
 ETag: "5f4894cb-aa5c"
 Accept-Ranges: bytes
-Set-Cookie: SERVERID=b1981271024e2ffaaf63c337b5db4f00|1600961324|1600961324;Path=/
+Set-Cookie: SERVERID=472b148b148a839eba1c5c1a8657e3a7|1601042484|1601042484;Path=/
 
 <!DOCTYPE html>
 <html>
@@ -25,7 +25,7 @@ Set-Cookie: SERVERID=b1981271024e2ffaaf63c337b5db4f00|1600961324|1600961324;Path
     <link href="//assets.zhihuishu.com/icon/favicon.ico?v=20200519" rel="shortcut icon" />
     <link href="css/home/HomeNew.css?v=20200519" rel="stylesheet" type="text/css" />
     
-    <script type="text/javascript" src="//aeu.alicdn.com/waf/fa8c43743bff6e43322dc900fddf70b6.js?t=1600961324"></script><script>
+    <script type="text/javascript" src="//aeu.alicdn.com/waf/fa8c43743bff6e43322dc900fddf70b6.js?t=1601042484"></script><script>
         // 重定向至https
         var targetProtocol = "https:";
         if (window.location.protocol != targetProtocol){
